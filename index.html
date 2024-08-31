@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <!-- Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- xterm.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css">
+    <style>
+        /* Ensure the terminal scales with the screen size */
+        #terminal {
+            min-height: 400px; /* Increased height */
+            min-width: 600px; /* Increased width */
+            max-width: 100%;  /* Full width for responsiveness */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        /* Custom style to ensure a minimum height on smaller screens */
+        @media (max-width: 640px) {
+            #terminal {
+                min-height: 300px; /* Reduce height for smaller screens */
+                min-width: auto; /* Allow width to adjust */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+    
+    <main class="flex-grow flex justify-center items-center px-4">
+        <div id="terminal" class="w-full max-w-5xl bg-black rounded-lg shadow-lg"></div>
+    </main>
+
+    <footer class="bg-gray-800 p-4 text-center">
+        <p>&copy; 2024 Mayank Sharma</p>
+    </footer>
+
+    <!-- xterm.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+    <!-- Your custom JS file -->
+    <script src="main.js"></script>
+</body>
+</html>
